@@ -1,0 +1,68 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.toast {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    z-index: 1000;
+    max-width: min(24rem, calc(100vw - 3rem));
+    padding: 0.875rem 1rem;
+    border-radius: 0.5rem;
+    background: #172554;
+    color: #fff;
+    box-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 20%);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(0.75rem);
+    transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.toast.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.summary-card {
+    padding: 1rem 1.25rem;
+    border: 1px solid #d4d4d8;
+    border-radius: 0.5rem;
+    background: #fafafa;
+    transition: border-color 180ms ease, background 180ms ease;
+}
+
+.summary-card.is-ready {
+    border-color: #16a34a;
+    background: #f0fdf4;
+}
+
+.summary-card dl {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.5rem 1rem;
+    margin: 0;
+}
+
+.summary-card dt {
+    font-weight: 600;
+}
+
+.summary-card dd {
+    margin: 0;
+    text-align: right;
+}
+
+.summary-total {
+    font-weight: 700;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .toast {
+        transition: none;
+    }
+}
