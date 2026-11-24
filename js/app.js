@@ -12,11 +12,6 @@ function showToast(message, duration = 3000) {
     }, duration);
 }
 
-/* ---------------------------------------------------------------
-   Activity 7 - Selector forms and live interaction
-   Reads the booking form selectors and keeps the Booking Summary
-   card in sync (match, stand, unit price, quantity, total).
----------------------------------------------------------------- */
 
 // Unit price per stand, taken from the Match Schedule table.
 const MATCH_PRICES = {
