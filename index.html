@@ -1,24 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sample Page</title>
-    <link rel="stylesheet" href="CSS/style.css">
-  </head>
-  <body>
-    <header>
-      <h1>Welcome to REVA University</h1>
-      <nav aria-label="Main navigation">
-        <a href="#">Home</a>
-        <a href="https://rulms.reva.edu.in/login/index.php">About</a>
-        <a href="#">Contact</a>
-      </nav>
-    </header>
-    <main>
-      <section>
-        <p></p>
-      </section>
-    </main>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="IPL 2026 match schedule and ticket booking">
+  <title>IPL 2026 Ticket Booking</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <script src="JS/app.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>IPL 2026 Ticket Booking</h1>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#matches">Matches</a></li>
+        <li><a href="#book-ticket">Book Ticket</a></li>
+        <li><a href="#my-bookings">My Bookings</a></li>
+        <li><a href="#guidelines">Guidelines</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" aria-labelledby="hero-heading">
+      <span class="eyebrow">IPL 2026 &middot; Live at the stadium</span>
+      <h2 id="hero-heading">Experience the stadium energy, live.</h2>
+      <p>
+        Book your seat for the biggest fixtures of the season. Pick a match, choose
+        your stand and watch the total update as you go.
+      </p>
+
+      <div class="hero-actions">
+        <a class="button" href="#matches">View Schedule</a>
+        <a class="button button--ghost" href="#book-ticket">Book Ticket</a>
+      </div>
+
+      <div class="hero-stats">
+        <div><strong>3</strong><span>Fixtures</span></div>
+        <div><strong>3</strong><span>Venues</span></div>
+        <div><strong>6</strong><span>Teams</span></div>
+        <div><strong>266</strong><span>Seats left</span></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="about-heading">
+      <h2 id="about-heading">About IPL 2026</h2>
+      <p>
+        Enjoy an unforgettable cricket experience with the best teams and venues in
+        India. Every fixture below is played under lights, so bring the noise.
+      </p>
+
+      <h3>Popular Teams</h3>
+      <ul>
+        <li>Chennai Super Kings</li>
+        <li>Mumbai Indians</li>
+        <li>Royal Challengers Bengaluru</li>
+        <li>Kolkata Knight Riders</li>
+        <li>Rajasthan Royals</li>
+      </ul>
+
+      <h3>Major Match Venues</h3>
+      <ul>
+        <li>Wankhede Stadium, Mumbai</li>
+        <li>M. A. Chidambaram Stadium, Chennai</li>
+        <li>M. Chinnaswamy Stadium, Bengaluru</li>
+        <li>Eden Gardens, Kolkata</li>
+        <li>Narendra Modi Stadium, Ahmedabad</li>
+      </ul>
+    </section>
+
+    <section id="matches" aria-labelledby="schedule-heading">
+      <h2 id="schedule-heading">Match Schedule</h2>
+      <p>Three fixtures on sale. Pick one to load it into the booking form.</p>
+
+      <div class="match-grid">
+        <article>
+          <span class="match-no">Match 01</span>
+          <div class="teams">
+            <span class="team-badge">RCB</span>
+            <span class="vs">vs</span>
+            <span class="team-badge">MI</span>
+          </div>
+          <h3>Royal Challengers Bengaluru vs Mumbai Indians</h3>
+          <p>April 5, 2026 &middot; 7:30 PM &middot; Wankhede Stadium, Mumbai</p>
+          <span class="seats">120 seats left</span>
+          <a class="button" href="#book-ticket">Book this match</a>
+        </article>
+
+        <article>
+          <span class="match-no">Match 02</span>
+          <div class="teams">
+            <span class="team-badge">CSK</span>
+            <span class="vs">vs</span>
+            <span class="team-badge">KKR</span>
+          </div>
+          <h3>Chennai Super Kings vs Kolkata Knight Riders</h3>
+          <p>April 6, 2026 &middot; 7:30 PM &middot; M. A. Chidambaram Stadium, Chennai</p>
+          <span class="seats">84 seats left</span>
+          <a class="button" href="#book-ticket">Book this match</a>
+        </article>
+
+        <article>
+          <span class="match-no">Match 03</span>
+          <div class="teams">
+            <span class="team-badge">DC</span>
+            <span class="vs">vs</span>
+            <span class="team-badge">SRH</span>
+          </div>
+          <h3>Delhi Capitals vs Sunrisers Hyderabad</h3>
+          <p>April 7, 2026 &middot; 7:30 PM &middot; Arun Jaitley Stadium, Delhi</p>
+          <span class="seats">62 seats left</span>
+          <a class="button" href="#book-ticket">Book this match</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="book-ticket" aria-labelledby="booking-heading">
+      <h2 id="booking-heading">Book Ticket</h2>
+      <p>Choose a fixture, a stand and the number of tickets.</p>
+
+      <div class="booking-layout">
+        <form>
+          <label for="match">Match</label>
+          <select id="match" name="match">
+            <option value="">Select a match</option>
+            <option value="match-01">RCB vs MI &middot; 5 April</option>
+            <option value="match-02">CSK vs KKR &middot; 6 April</option>
+            <option value="match-03">DC vs SRH &middot; 7 April</option>
+          </select>
+
+          <label for="stand">Stand</label>
+          <select id="stand" name="stand">
+            <option value="general">General - Rs. 1,500</option>
+            <option value="premium">Premium - Rs. 3,500</option>
+            <option value="vip">VIP - Rs. 7,500</option>
+          </select>
+
+          <label for="quantity">Tickets</label>
+          <input id="quantity" name="quantity" type="number" min="0" max="10" value="1">
+
+          <fieldset>
+            <legend>Delivery</legend>
+            <label class="radio-option">
+              <input type="radio" name="delivery" value="e-ticket" checked>
+              E-ticket by email
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="delivery" value="box-office">
+              Collect at box office
+            </label>
+          </fieldset>
+
+          <div class="form-actions">
+            <button type="submit">Confirm booking</button>
+            <button type="reset" class="reset-button">Reset</button>
+          </div>
+        </form>
+
+        <aside id="booking-summary" class="summary" aria-live="polite">
+          <h3>Booking summary</h3>
+          <dl>
+            <div>
+              <dt>Match</dt>
+              <dd id="summary-match">Not selected</dd>
+            </div>
+            <div>
+              <dt>Stand</dt>
+              <dd id="summary-stand">Not selected</dd>
+            </div>
+            <div>
+              <dt>Unit price</dt>
+              <dd id="summary-price">Rs. 0</dd>
+            </div>
+            <div>
+              <dt>Tickets</dt>
+              <dd id="summary-quantity">0</dd>
+            </div>
+            <div class="total">
+              <dt>Total</dt>
+              <dd id="summary-total">Rs. 0</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section id="my-bookings" aria-labelledby="bookings-heading">
+      <h2 id="bookings-heading">My Bookings</h2>
+      <p>Bookings confirmed in this browser session are listed here.</p>
+      <ul>
+        <li>No bookings yet - confirm a ticket above to see it here.</li>
+      </ul>
+    </section>
+
+    <section id="guidelines" aria-labelledby="guidelines-heading">
+      <h2 id="guidelines-heading">Guidelines</h2>
+      <ul>
+        <li>Carry a valid photo ID along with your ticket.</li>
+        <li>Gates open two hours before the first ball.</li>
+        <li>Outside food and drinks are not allowed inside the stadium.</li>
+        <li>Keep the QR code on your e-ticket ready at the entry gate.</li>
+      </ul>
+    </section>
+  </main>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <footer>
+    <p>IPL 2026 Ticket Booking &middot; Built with HTML, CSS and JavaScript</p>
+    <p>React + Supabase version: see the react-booking-app folder.</p>
+  </footer>
+</body>
 </html>
